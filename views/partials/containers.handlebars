@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="block-1">
+    <div class="main-news">
+      <img src="{{mainNews.image}}" width="700px" height="400px" />
+      <a href="/news/{{mainNews.id}}"><h3>{{mainNews.title}}</h3></a>
+    </div>
+    <div class="second">
+      {{#each secondNews}}
+        <div class="second-news">
+          <img src="{{image}}" width="450px" height="200px" />
+          <a href="/news/{{id}}"><h4>{{title}}</h4></a></div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<style>
+  .container { width: 1300px; margin: auto; } .block-1 { width: 1300px; height:
+  500px; margin-top: 20px; display: flex; justify-content: space-between; }
+  .main-news { width: 700px; height: 500px; } .second-news { width: 450px;
+  height: 200px; margin-bottom: 40px; } .second { width: 450px; height: 500px;
+  margin-left: 40px; }
+</style>
+
+<!--<script>-->
+<!--    window.addEventListener('DOMContentLoaded', () => {-->
+<!--        fetch(`/api/data`)-->
+<!--                .then(res => res.json())-->
+<!--                .then((data) => {-->
+<!--                    console.log(data)-->
+<!--                    const container = document.querySelector('.container');-->
+<!--                    const mainNews = document.querySelector('.main-news')-->
+<!--                    for(let i = 0; i < data.news.length; i++) {-->
+<!--                        const img = document.createElement('img');-->
+<!--                        img.src = data.news[i].image-->
+<!--                        mainNews.append(img)-->
+<!--                        // block.textContent = data.news[i].image-->
+<!--                    }-->
+<!--                })-->
+<!--    })-->
+<!--</script>-->

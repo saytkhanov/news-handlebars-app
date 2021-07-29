@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="logo">
+    <img src="http://toplogos.ru/images/logo-sky-news.png" width="150px" />
+  </div>
+  <div class="menu">
+    <ul class="list">
+      {{#each headers}}
+        <a href="/categoryId/{{id}}" class="none"><li
+            class="list-item"
+          >{{name}}</li></a>
+      {{/each}}
+      <!--            <a href="/categoryId/{{id}}" class="none"><li class="list-item">Политика</li></a>-->
+      <!--            <a href="/categoryId/{{id}}" class="none"><li class="list-item">Бизнес</li></a>-->
+      <!--            <a href="/categoryId/{{id}}" class="none"><li class="list-item">IT-news</li></a>-->
+      <!--            <a href="/contacts" class="none"><li class="list-item">Контакты</li></a>-->
+    </ul>
+  </div>
+</div>
+
+<style>
+  .header { width: 1300px; display: flex; justify-content: space-between;
+  margin: auto; margin-top: 15px; } .none { text-decoration: none; } .menu {
+  width: 70%; } .list { padding: 0; margin: 0; list-style: none; display: flex;
+  justify-content: space-between; font-size: 25px; } .list-item { margin-right:
+  20px; color: darkblue; } :hover { color: gray; }
+</style>
